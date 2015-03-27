@@ -1,2 +1,2 @@
 # CustomDonate
-Plugin made for: [Jose]
+Plugin made for: [Jose] Allows you to do /donate

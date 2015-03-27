@@ -1,0 +1,6 @@
+name: CustomDonate
+main: me.raydond123.customdonate.CustomDonate
+version: 1.0
+commands:
+   donate:
+      description: A simple command.
