@@ -17,7 +17,17 @@ public class CustomDonate extends JavaPlugin implements Listener {
     public void onEnable() {
 
         logger.info("[CustomDonate] This plugin has been enabled!");
-        saveDefaultConfig();
+
+        if(getConfig().getStringList("message") == null) {
+
+            saveDefaultConfig();
+
+        } else {
+
+            saveConfig();
+
+        }
+
         Bukkit.getPluginManager().registerEvents(this, this);
 
     }
