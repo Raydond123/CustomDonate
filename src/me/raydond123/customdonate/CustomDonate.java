@@ -25,6 +25,7 @@ public class CustomDonate extends JavaPlugin implements Listener {
     public void onDisable() {
 
         logger.info("[CustomDonate] This plugin has been disabled!");
+        saveConfig();
 
     }
 
@@ -37,17 +38,9 @@ public class CustomDonate extends JavaPlugin implements Listener {
 
             for(int i = 0; i <= message.size() - 1; i++) {
 
-                if(!message.contains("%player%")) {
-
-                    sender.sendMessage(ChatColor.translateAlternateColorCodes('&', message.get(i)));
-
-                } else {
-
-                    String line = message.get(i);
-                    line.replaceAll("%player%", sender.getName());
-                    sender.sendMessage(ChatColor.translateAlternateColorCodes('&', line));
-
-                }
+                String line = message.get(i);
+                String newLine = line.replace("%player%", sender.getName());
+                sender.sendMessage(ChatColor.translateAlternateColorCodes('&', newLine));
 
             }
 
